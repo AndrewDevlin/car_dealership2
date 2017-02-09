@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,8 +9,8 @@
 <body>
     <h1>Your Search Results</h1>
     <ul>
-        {% foreach car in list_of_Cars %}
-        <li> {{ car.set_make_model }} <li>
+        {% for car in search_cars %}
+        <li> {{ car.getMakeModel }} </li>
         {% endfor %}
     </ul>
 </body>

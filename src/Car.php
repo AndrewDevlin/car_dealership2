@@ -18,25 +18,21 @@ class Car
     function setMakeModel($new_make_model)
     {
         $this->make_model = $new_make_model;
-
     }
 
     function setPrice($new_price)
     {
         $this->price = $new_price;
-        return $new_price;
     }
 
     function setMiles($new_miles)
     {
         $this->miles = $new_miles;
-        return $new_miles;
     }
 
     function setStyle($new_style)
     {
         $this->style = $new_style;
-        return $new_miles;
     }
 
     function setPicture($new_picture)
@@ -76,10 +72,15 @@ class Car
         array_push($_SESSION['list_of_cars'], $this);
     }
 
-    // static function getAll()
-    // {
-    //     return $_SESSION['list_of_cars'];
-    // }
-
+    static function search($price, $miles)
+    {
+        $cars_matching_search = array();
+        foreach ($_SESSION['list_of_cars'] as $car) {
+            if ($car->worthBuying($price, $miles)) {
+                array_push($cars_matching_search, $car);
+            };
+        };
+        return $cars_matching_search;
+    }
 }
 ?>
