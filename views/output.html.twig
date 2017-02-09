@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Search Results</title>
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+    <h1>Your Search Results</h1>
+    <ul>
+        {% foreach car in list_of_Cars %}
+        <li> {{ car.set_make_model }} <li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
