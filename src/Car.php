@@ -82,5 +82,10 @@ class Car
         };
         return $cars_matching_search;
     }
+
+    static function deleteAll()
+    {
+        $_SESSION['list_of_cars'] = array();
+    }
 }
 ?>

@@ -11,7 +11,13 @@
     <ul>
         {% for car in search_cars %}
         <li> {{ car.getMakeModel }} </li>
-        {% endfor %}
+            <ul>
+                <li> {{ car.getPrice }} </li>
+                <li> {{ car.getMiles }} </li>
+                <li> {{ car.getStyle }} </li>
+            </ul>
     </ul>
+    {% endfor %}
+    <p><a href="/">Home</a></p>
 </body>
 </html>
